@@ -7,9 +7,10 @@ import axios from "axios"
 function App() {
   const [count, setCount] = useState(0)
   const [array, setArray] = useState([]);
+  const apiUrl = process.env.API_URL;
 
   const fetchAPI = async () => {
-    const response = await axios.get("http://localhost:8080/api");
+    const response = await axios.get(apiUrl);
     setArray(response.data.fruits);
     console.log(response.data.fruits);
   }
