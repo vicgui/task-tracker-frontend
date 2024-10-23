@@ -7,7 +7,7 @@ import axios from "axios"
 function App() {
   const [count, setCount] = useState(0)
   const [array, setArray] = useState([]);
-  const apiUrl = process.env.API_URL;
+  const apiUrl = "http://localhost:8080/api";
 
   const fetchAPI = async () => {
     const response = await axios.get(apiUrl);
